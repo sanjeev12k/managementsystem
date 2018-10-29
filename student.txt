@@ -1,0 +1,134 @@
+#include<stdio.h>
+struct year_semester
+{
+int year;
+int semester;
+};
+struct student
+{
+char stu_name[20];
+int age;
+char branch[3];
+struct year_semester sem;
+float pre_sem_marks;
+};
+int main()
+{
+int c,ch;
+struct student s;
+FILE *fp;
+
+printf("\n Enter your choice:\n 1.submit:\n 2.To add data:\n 3.List all the students:\n 4.Filter the data based on prev sem score:\n");
+do
+{
+switch(ch)
+{
+case 1: 
+	fp=fopen("StudentData.txt","w");
+	fwrite=(&s,sizeof(student),1,fp);
+	fclose(fp);
+case 2: 
+	printf("Enter the details of the student:");
+	printf("\nstudent name:");
+	scanf("%s",s.stu_name[20]);
+	printf("\nAge:");
+	scanf("%d",&s.age);
+	printf("\nbranch:");
+	scanf("%s",s.branch);
+	printf("\nYear:");
+	scanf("%d",&s.sem.year);
+	printf("\nsemester:");
+	scanf("%d",&s.sem.semester);
+	printf("\nprevious semester marks:");
+	scanf("%0.2f",&s.pre_sem_marks);
+	fp=fopen("StudentData.txt","w");
+	fwrite=(&s,sizeof(student),1,fp);
+	fclose(fp);
+	break;
+case 3:
+	fp=fopen(StudentData.txt","r");
+	while(fread(&s,sizeof(student),1,fp)
+	{
+	printf("Details of the student:\n );
+	printf("student name:%s\n",s.stu_name);
+	printf("Age:%d\n",s.age);
+	printf("branch:%s\n",s.branch);
+	printf("Year:%d\n",s.sem.year);
+	prinf("semester:%d\n",s.sem.semester);
+	printf("previous semester marks:%0.2f\n",s.pre_sem_marks);
+	}
+	fclose(fp);
+	break;
+case 4:
+	prinf("\nenter the Score on which you want to filter:");
+	scanf("%0.2f",&score);
+	printf("\nPress\n 1.greater values\n 2.lesser values\n 3.equal\n:);
+	scanf("%d",ch);
+	do
+	{
+	case 1:	
+		fp=fopen(StudentData.txt","r");
+		while(fread(&s,sizeof(student),1,fp)
+		{
+		if(s.prev_sem_marks>score)
+		{
+		printf("Details of the student:\n );
+		printf("student name:%s\n",s.stu_name);
+		printf("Age:%d\n",s.age);
+		printf("branch:%s\n",s.branch);
+		printf("Year:%d\n",s.sem.year);
+		prinf("semester:%d\n",s.sem.semester);
+		printf("previous semester marks:%0.2f\n",s.pre_sem_marks);
+		}
+		}
+		fclose(fp);
+		break;
+	case 2:	
+		fp=fopen(StudentData.txt","r");
+		while(fread(&s,sizeof(student),1,fp)
+		{
+		if(s.prev_sem_marks<score)
+		{
+		printf("Details of the student:\n );
+		printf("student name:%s\n",s.stu_name);
+		printf("Age:%d\n",s.age);
+		printf("branch:%s\n",s.branch);
+		printf("Year:%d\n",s.sem.year);
+		prinf("semester:%d\n",s.sem.semester);
+		printf("previous semester marks:%0.2f\n",s.pre_sem_marks);
+		}
+		}
+		fclose(fp);
+		break;
+	case 3:	
+		fp=fopen(StudentData.txt","r");
+		while(fread(&s,sizeof(student),1,fp)
+		{
+		if(s.prev_sem_marks=score)
+		{
+		printf("Details of the student:\n );
+		printf("student name:%s\n",s.stu_name);
+		printf("Age:%d\n",s.age);
+		printf("branch:%s\n",s.branch);
+		printf("Year:%d\n",s.sem.year);
+		prinf("semester:%d\n",s.sem.semester);
+		printf("previous semester marks:%0.2f\n",s.pre_sem_marks);
+		}
+		}
+		fclose(fp);
+		break;
+	default: printf("invalid choice:");
+	printf("to exit press 0");
+	}while(c!=0)
+	break;
+	default: printf("invalid",choice);
+	printf("press 0 to exit:");
+}while(c!=0)
+
+return 0;
+}
+
+
+
+
+
